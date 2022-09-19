@@ -1,0 +1,25 @@
+import React from "react";
+import { Typography, Button, Card, CardMedia, CardContent, CardActions, Chip } from "@material-ui/core";
+import LocationOnIcon from '@material-ui/icons/LocationOn'
+import { Phone } from "@material-ui/icons";
+import { Rating } from "@mui/material";
+
+
+import useStyles from './styles'
+
+const PlaceDetails = ({ place }) => {
+
+    const classes = useStyles()
+
+    return (
+       <Card elevation={6}>
+            <CardMedia 
+            style={{ height: 350}}
+            image={place.photo ? place.photo.images.large.url : "https://unsplash.com/photos/GXXYkSwndP4"}
+            title={place.name}
+            />
+       </Card>
+    )
+}
+
+export default PlaceDetails;
