@@ -51,7 +51,7 @@ const App = () => {
         }
     }, [type,  bounds])
 
-  
+    console.log(places)
     return (
         <div>
             <CssBaseline />
@@ -60,7 +60,7 @@ const App = () => {
             />
             
             <Grid container spacing={2} style={{ width: '100%' }}>
-                 <Grid item xs={12}  md={9}>
+                 <Grid item xs={12}  md={8}>
                     <Map 
                     setCoords={setCoords}
                     setBounds={setBounds}
@@ -69,7 +69,7 @@ const App = () => {
                     setChildClicked={setChildClicked}
                     />
                 </Grid>
-                <Grid item xs={12}  md={3}>
+                <Grid item xs={12}  md={4}>
                     <List 
                     places={filteredPlaces.length ? filteredPlaces : places} 
                     childClicked={childClicked}

@@ -1,12 +1,11 @@
 import { alpha, makeStyles } from "@material-ui/core/styles";
+import { createTheme } from "@mui/material";
 
-
-const themes = {
+const themes = ({
   palette: {
-    primary: {
-      main: '#0d7507'
-    }
+    primary: '#2b6626'
   }
+})
 }
 
 
@@ -37,6 +36,6 @@ export default makeStyles((theme) => ({
       padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' },
     },
     toolbar: {
-      display: 'flex', justifyContent: 'space-between', backgroundColor: alpha(themes.palette.primary.main, 0.9)
+      display: 'flex', justifyContent: 'space-between', backgroundColor: alpha(theme.palette.common.black, 0.5)
     },
   }));

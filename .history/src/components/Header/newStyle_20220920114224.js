@@ -4,7 +4,7 @@ import { alpha, makeStyles } from "@material-ui/core/styles";
 const themes = {
   palette: {
     primary: {
-      main: '#0d7507'
+      main: '#1cd929'
     }
   }
 }

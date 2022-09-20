@@ -8,7 +8,7 @@ export default makeStyles(() => ({
         padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px',
       },
       mapContainer: {
-        height: '85vh', width: '95%', margin: "20px auto"
+        height: '85vh', width: '80%', marginTop: "20px aut0"
       },
       markerContainer: {
         position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 },

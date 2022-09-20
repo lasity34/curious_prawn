@@ -23,7 +23,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
   return (
     <Card elevation={8}>
       <CardMedia
-        style={{ height: 200 }}
+        style={{ height: 250 }}
         image={
           place.photo
             ? place.photo.images.large.url

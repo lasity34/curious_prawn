@@ -3,8 +3,8 @@ import { Autocomplete } from "@react-google-maps/api";
 import { Toolbar, AppBar, Box, InputBase, Typography } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search"
 import { useState } from "react";
-import  useStyles  from './newStyle'
-
+import useStyles from './newStyle'
+import { ThemeProvider } from "@mui/material";
 
 const Header = ({ setCoords }) => {
   const classes = useStyles()
@@ -20,7 +20,7 @@ const Header = ({ setCoords }) => {
   }
 
   return (
-   
+    <ThemeProvider>
 
     
     <AppBar className={classes.app} position="static">
@@ -44,7 +44,7 @@ const Header = ({ setCoords }) => {
         </Box>
       </Toolbar>
     </AppBar>
-  
+    </ThemeProvider>
   );
 };
 

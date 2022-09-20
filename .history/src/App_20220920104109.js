@@ -51,7 +51,7 @@ const App = () => {
         }
     }, [type,  bounds])
 
-  
+    console.log(places)
     return (
         <div>
             <CssBaseline />

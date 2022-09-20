@@ -1,7 +1,7 @@
 
 import React, { useState ,useEffect} from "react";
 import { CssBaseline, Grid } from "@mui/material";
-import { Typography } from "@material-ui/core";
+
 import { getPlacesData } from './api/index'
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
@@ -44,32 +44,22 @@ const App = () => {
             setIsLoading(true)
               getPlacesData(type, bounds.sw, bounds.ne)
                   .then((data) => {
-                      setPlaces(data.filter((place) => place.name && place.num_reviews > 0).splice(0, 10))
+                      setPlaces(data.filter((place) => place.name && place.num_reviews > 0).splice(0, 5))
                       setFilteredPlaces([])
                       setIsLoading(false)
                   })
         }
     }, [type,  bounds])
 
-  
+    console.log(places)
     return (
         <div>
             <CssBaseline />
             <Header
             setCoords={setCoords}
             />
-            
             <Grid container spacing={2} style={{ width: '100%' }}>
-                 <Grid item xs={12}  md={9}>
-                    <Map 
-                    setCoords={setCoords}
-                    setBounds={setBounds}
-                    coords={coords}
-                    places={filteredPlaces.length ? filteredPlaces : places}
-                    setChildClicked={setChildClicked}
-                    />
-                </Grid>
-                <Grid item xs={12}  md={3}>
+                <Grid item xs={12}  md={4}>
                     <List 
                     places={filteredPlaces.length ? filteredPlaces : places} 
                     childClicked={childClicked}
@@ -80,7 +70,15 @@ const App = () => {
                     rating={rating}
                     />
                 </Grid>
-             
+                <Grid item xs={12}  md={8}>
+                    <Map 
+                    setCoords={setCoords}
+                    setBounds={setBounds}
+                    coords={coords}
+                    places={filteredPlaces.length ? filteredPlaces : places}
+                    setChildClicked={setChildClicked}
+                    />
+                </Grid>
             </Grid>
             
         </div>
