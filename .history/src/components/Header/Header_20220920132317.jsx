@@ -1,20 +1,11 @@
 import React from "react";
 import { Autocomplete } from "@react-google-maps/api";
-import {
-  Toolbar,
-  AppBar,
-  Box,
-  InputBase,
-  Typography,
-  FormControl,
-  MenuItem,
-  Select,
-} from "@material-ui/core";
+import { Toolbar, AppBar, Box, InputBase, Typography } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import { useState } from "react";
 import useStyles from "./newStyle";
 
-const Header = ({ setCoords, type, setType, setRating, rating }) => {
+const Header = ({ setCoords }) => {
   const classes = useStyles();
   const [autoComplete, setAutoComplete] = useState(null);
 
@@ -56,36 +47,23 @@ const Header = ({ setCoords, type, setType, setRating, rating }) => {
             </Box>
           </div>
           <Box display="flex">
-            <Box display="flex" alignItems="center">
-              <Typography variant="subtitle1" className={classes.title}>
-                Type
-              </Typography>
-              <FormControl className={classes.formControl}>
-                <Select className={classes.select} value={type} onChange={(e) => setType(e.target.value)}>
-                  <MenuItem value="Select Type">Restaurants</MenuItem>
-                  <MenuItem value="restaurants">Restaurants</MenuItem>
-                  <MenuItem value="hotels">Hotels</MenuItem>
-                  <MenuItem value="attractions">Attractions</MenuItem>
+          <FormControl className={classes.formControl}>
+                <InputLabel>Type</InputLabel>
+                <Select value={type} onChange={(e) => setType(e.target.value)}>
+                    <MenuItem value="restaurants">Restaurants</MenuItem>
+                    <MenuItem value="hotels">Hotels</MenuItem>
+                    <MenuItem value="attractions">Attractions</MenuItem>
                 </Select>
-              </FormControl>
-            </Box>
-            <Box display="flex" alignItems="center">
-              <Typography variant="subtitle1" className={classes.title}>
-                Rating
-              </Typography>
-              <FormControl className={classes.formControl}>
-                <Select
-                  className={classes.select}
-                  value={rating}
-                  onChange={(e) => setRating(e.target.value)}
-                >
-                  <MenuItem value={1}>All Ratings</MenuItem>
-                  <MenuItem value={3}>Above 3.0</MenuItem>
-                  <MenuItem value={4}>Above 4.0</MenuItem>
-                  <MenuItem value={4.5}>Above 4.5</MenuItem>
+            </FormControl>
+            <FormControl className={classes.formControl}>
+                <InputLabel>Rating</InputLabel>
+                <Select value={rating} onChange={(e) => setRating(e.target.value)}>
+                    <MenuItem value={0}>All</MenuItem>
+                    <MenuItem value={3}>Above 3.0</MenuItem>
+                    <MenuItem value={4}>Above 4.0</MenuItem>
+                    <MenuItem value={4.5}>Above 4.5</MenuItem>
                 </Select>
-              </FormControl>
-            </Box>
+            </FormControl>
           </Box>
         </Toolbar>
       </AppBar>

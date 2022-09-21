@@ -35,7 +35,7 @@ const List = ({
         </div>
       ) : (
         <>
-            <Typography variant="h4">
+            <Typography>
                 List of {type}
             </Typography>
           <Grid container spacing={3} className={classes.list}>

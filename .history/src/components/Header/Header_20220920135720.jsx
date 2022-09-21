@@ -8,6 +8,7 @@ import {
   Typography,
   FormControl,
   MenuItem,
+  InputLabel,
   Select,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
@@ -71,7 +72,7 @@ const Header = ({ setCoords, type, setType, setRating, rating }) => {
             </Box>
             <Box display="flex" alignItems="center">
               <Typography variant="subtitle1" className={classes.title}>
-                Rating
+                rating
               </Typography>
               <FormControl className={classes.formControl}>
                 <Select
@@ -79,7 +80,7 @@ const Header = ({ setCoords, type, setType, setRating, rating }) => {
                   value={rating}
                   onChange={(e) => setRating(e.target.value)}
                 >
-                  <MenuItem value={1}>All Ratings</MenuItem>
+                  <MenuItem value={1}>all</MenuItem>
                   <MenuItem value={3}>Above 3.0</MenuItem>
                   <MenuItem value={4}>Above 4.0</MenuItem>
                   <MenuItem value={4.5}>Above 4.5</MenuItem>

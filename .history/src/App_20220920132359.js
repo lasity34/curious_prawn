@@ -19,7 +19,7 @@ const App = () => {
     const [bounds, setBounds] = useState({})
     
     const [type, setType] = useState('restaurants')
-    const [rating, setRating] = useState(1)
+    const [rating, setRating] = useState('')
 
    const [isLoading, setIsLoading] = useState(false)
     

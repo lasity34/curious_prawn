@@ -41,16 +41,5 @@ export default makeStyles((theme) => ({
     },
     topHead: {
       width: '100%', display: 'flex', justifyContent: 'space-between'
-    },
-    formControl: {
-      minWidth: 150, 
-      margin: theme.spacing(2),
-       backgroundColor: alpha(theme.palette.common.white, 0.65),
-        '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.75) },
-        color: 'white',
-        borderRadius: theme.shape.borderRadius,
-    },
-    select: {
-      paddingLeft: '0.5em'
     }
   }));

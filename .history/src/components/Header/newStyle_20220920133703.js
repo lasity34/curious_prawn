@@ -49,8 +49,5 @@ export default makeStyles((theme) => ({
         '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.75) },
         color: 'white',
         borderRadius: theme.shape.borderRadius,
-    },
-    select: {
-      paddingLeft: '0.5em'
     }
   }));

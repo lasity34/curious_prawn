@@ -13,7 +13,10 @@ const List = ({
   places,
   childClicked,
   isLoading,
-  type
+  type,
+  setType,
+  rating,
+  setRating,
 }) => {
   const classes = useStyles();
 
@@ -35,8 +38,8 @@ const List = ({
         </div>
       ) : (
         <>
-            <Typography variant="h4">
-                List of {type}
+            <Typography>
+               [` List of ${type}`]
             </Typography>
           <Grid container spacing={3} className={classes.list}>
             {places?.map((place, i) => (

@@ -37,20 +37,9 @@ export default makeStyles((theme) => ({
       padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' },
     },
     toolbar: {
-      display: 'flex',  backgroundColor: alpha(themes.palette.primary.main, 0.9), flexDirection: 'column', padding: '1em'
+      display: 'flex', justifyContent: 'space-between', backgroundColor: alpha(themes.palette.primary.main, 0.9), flexDirection: 'column'
     },
     topHead: {
-      width: '100%', display: 'flex', justifyContent: 'space-between'
-    },
-    formControl: {
-      minWidth: 150, 
-      margin: theme.spacing(2),
-       backgroundColor: alpha(theme.palette.common.white, 0.65),
-        '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.75) },
-        color: 'white',
-        borderRadius: theme.shape.borderRadius,
-    },
-    select: {
-      paddingLeft: '0.5em'
+      width: '100%'
     }
   }));

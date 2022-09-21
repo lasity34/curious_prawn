@@ -8,6 +8,7 @@ import {
   Typography,
   FormControl,
   MenuItem,
+  InputLabel,
   Select,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
