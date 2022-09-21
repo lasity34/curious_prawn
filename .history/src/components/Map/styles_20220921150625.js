@@ -24,6 +24,6 @@ export default makeStyles(() => ({
           height: "70vh", margin: '2em auto', width: '95%'
       },
       paperMobile: {
-        padding: '3px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '270%', position: 'absolute'
+        padding: '3px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '90%', position: 'absolute'
       }
 }))
