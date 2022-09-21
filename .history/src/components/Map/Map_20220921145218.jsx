@@ -56,8 +56,8 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
               </Paper>
             ) : (
               <div>
-                <LocationOnOutlinedIcon  />
-                <Paper elevation={3} className={classes.paperMobile}>
+             
+                {/* <Paper elevation={3} className={classes.paperMobile}>
                   <p className={classes.name}> {place.name}</p>
                   <img
                   className={classes.pointer}
@@ -66,9 +66,9 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
                       ? place.photo.images.small.url
                       : "https://unsplash.com/photos/GXXYkSwndP4"
                   } />
-              
-                </Paper>
-                
+                  <p style={{ textAlign: "center"}}> {place.ranking}</p>
+                </Paper> */}
+                <LocationOnOutlinedIcon />
               </div>
             )}
           </div>

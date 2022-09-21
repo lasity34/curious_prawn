@@ -14,16 +14,16 @@ export default makeStyles(() => ({
       markerContainer: {
         position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 },
       },
+      rating: {
+          backgroundColor: blue
+      },
       pointer: {
         cursor: 'pointer', height: '5em', width: '5em', margin: '0 auto'
-      },
-      name: {
-        textAlign: "center", marginTop: 0
       },
       mobileMap: {
           height: "70vh", margin: '2em auto', width: '95%'
       },
       paperMobile: {
-        padding: '3px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '90px', position: 'absolute'
+        padding: '5px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px'
       }
 }))

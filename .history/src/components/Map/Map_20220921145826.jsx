@@ -66,7 +66,7 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
                       ? place.photo.images.small.url
                       : "https://unsplash.com/photos/GXXYkSwndP4"
                   } />
-              
+                  <p style={{ textAlign: "center"}}> {place.ranking}</p>
                 </Paper>
                 
               </div>

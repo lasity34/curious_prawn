@@ -32,11 +32,10 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
             lng={Number(place.longitude)}
             key={i}
           >
+            
             {isDesktop ? (
               <Paper elevation={3} className={classes.paper}>
-                <p className={classes.name}>
-                  {place.name}
-                </p>
+                <p>{place.name}</p>
                 <img
                   className={classes.pointer}
                   src={
@@ -47,29 +46,24 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
                   alt={place.name}
                 />
                 <Rating
+                
                   sx={{
-                    fontSize: "0.9rem",
+                    fontSize: '0.9rem'
+                    
                   }}
                   value={Number(place.rating)}
                   readOnly
                 />
               </Paper>
             ) : (
-              <div>
-                <LocationOnOutlinedIcon  />
+              <>
+                <LocationOnOutlinedIcon />
                 <Paper elevation={3} className={classes.paperMobile}>
-                  <p className={classes.name}> {place.name}</p>
-                  <img
-                  className={classes.pointer}
-                  src={
-                    place.photo
-                      ? place.photo.images.small.url
-                      : "https://unsplash.com/photos/GXXYkSwndP4"
-                  } />
-              
+                  <Typography variant="caption" gutterBottom>
+                    {place.name}
+                  </Typography>
                 </Paper>
-                
-              </div>
+              </>
             )}
           </div>
         ))}

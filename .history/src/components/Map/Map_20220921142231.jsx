@@ -55,21 +55,19 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
                 />
               </Paper>
             ) : (
-              <div>
-                <LocationOnOutlinedIcon  />
+              <>
+                <LocationOnOutlinedIcon />
                 <Paper elevation={3} className={classes.paperMobile}>
                   <p className={classes.name}> {place.name}</p>
                   <img
                   className={classes.pointer}
                   src={
                     place.photo
-                      ? place.photo.images.small.url
+                      ? place.photo.images.large.url
                       : "https://unsplash.com/photos/GXXYkSwndP4"
                   } />
-              
                 </Paper>
-                
-              </div>
+              </>
             )}
           </div>
         ))}
