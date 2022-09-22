@@ -12,11 +12,11 @@ const themes = {
 
 export default makeStyles((theme) => ({
   title: {
-    fontSize: "1rem",
+    fontSize: "1.2rem",
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.up("md")]: {
-      fontSize: "1.5rem",
+      fontSize: "1.8rem",
     },
   },
 

@@ -71,7 +71,7 @@ const Header = ({
             }}
           >
             <Box display="flex">
-              <Typography variant="h3" className={classes.title}>
+              <Typography variant="h4" className={classes.title}>
                 Type
               </Typography>
               <FormControl className={classes.formControl}>

@@ -42,7 +42,7 @@ const Header = ({
       <AppBar className={classes.app} position="static">
         <Toolbar className={classes.toolbar}>
           <div className={classes.topHead} style={{ width: "100%" }}>
-            <Typography variant="h4" className={classes.title}>
+            <Typography variant="h5" className={classes.title}>
               Curious Prawn
             </Typography>
             <Box className={classes.box} display="flex">
@@ -71,7 +71,7 @@ const Header = ({
             }}
           >
             <Box display="flex">
-              <Typography variant="h3" className={classes.title}>
+              <Typography variant="subtitle2" className={classes.title}>
                 Type
               </Typography>
               <FormControl className={classes.formControl}>

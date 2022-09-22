@@ -12,11 +12,11 @@ const themes = {
 
 export default makeStyles((theme) => ({
   title: {
-    fontSize: "1rem",
+    fontSize: "1.2rem",
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.up("md")]: {
-      fontSize: "1.5rem",
+      fontSize: "1.8rem",
     },
   },
 
@@ -26,7 +26,7 @@ export default makeStyles((theme) => ({
     height: '100%',
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    
+    fontSize: 1re.
   },
   search: {
     position: "relative",
@@ -65,7 +65,6 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "1em",
-   
   },
   topHead: {
     width: "100%",
