@@ -19,12 +19,12 @@ export default makeStyles((theme) => ({
       },
     },
     app: {
-      background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`, backgroundSize: '100%', backgroundRepeat: "no-repeat", backgroundPosition: 'center'
+      background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(${Image})`, backgroundSize: '100%', backgroundRepeat: "no-repeat", backgroundPosition: 'center'
     },
     search: {
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
-      backgroundColor: alpha(theme.palette.common.white, 0.35),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
       '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.55) },
       marginRight: theme.spacing(2),
       marginLeft: 0,
@@ -38,7 +38,7 @@ export default makeStyles((theme) => ({
       color: 'white',
     },
     inputInput: {
-      padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' }, color: 'white'
+      padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' },
     },
     toolbar: {
       display: 'flex',  flexDirection: 'column', padding: '1em'

@@ -48,8 +48,7 @@ const Header = ({ setCoords, type, setType, setRating, rating, cuisine, setCuisi
                   <SearchIcon />
                 </div>
                 <InputBase
-              
-                  placeholder="Search..." 
+                  placeholder="Search..." color="white"
                   classes={{
                     root: classes.inputRoot,
                     input: classes.inputInput,

@@ -1,8 +1,6 @@
 import React from "react";
 import { Autocomplete } from "@react-google-maps/api";
 
-
-
 import {
   Toolbar,
   AppBar,
@@ -35,7 +33,7 @@ const Header = ({ setCoords, type, setType, setRating, rating, cuisine, setCuisi
       <AppBar className={classes.app} position="static">
         <Toolbar className={classes.toolbar}>
           <div className={classes.topHead} style={{ width: "100%" }}>
-            <Typography variant="h5" className={classes.title}>
+            <Typography variant="h4" className={classes.title}>
              Curious Prawn
             </Typography>
             <Box className={classes.box} display="flex">
@@ -48,8 +46,7 @@ const Header = ({ setCoords, type, setType, setRating, rating, cuisine, setCuisi
                   <SearchIcon />
                 </div>
                 <InputBase
-              
-                  placeholder="Search..." 
+                  placeholder="Search..."
                   classes={{
                     root: classes.inputRoot,
                     input: classes.inputInput,

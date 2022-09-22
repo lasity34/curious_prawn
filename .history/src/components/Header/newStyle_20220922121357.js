@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
       },
     },
     app: {
-      background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`, backgroundSize: '100%', backgroundRepeat: "no-repeat", backgroundPosition: 'center'
+      background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${Image})`, backgroundSize: '100%', backgroundRepeat: "no-repeat", backgroundPosition: 'center'
     },
     search: {
       position: 'relative',

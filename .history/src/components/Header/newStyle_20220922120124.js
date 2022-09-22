@@ -19,13 +19,13 @@ export default makeStyles((theme) => ({
       },
     },
     app: {
-      background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`, backgroundSize: '100%', backgroundRepeat: "no-repeat", backgroundPosition: 'center'
+      backgroundImage: `url(${Image})`, backgroundSize: '100%', backgroundRepeat: "no-repeat", backgroundPosition: 'center', opacity: "0.5"
     },
     search: {
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
-      backgroundColor: alpha(theme.palette.common.white, 0.35),
-      '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.55) },
+      backgroundColor: alpha(theme.palette.common.white, 0.15),
+      '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.25) },
       marginRight: theme.spacing(2),
       marginLeft: 0,
       width: '100%',
@@ -35,10 +35,10 @@ export default makeStyles((theme) => ({
       padding: theme.spacing(0, 2), height: '100%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center',
     },
     inputRoot: {
-      color: 'white',
+      color: 'inherit',
     },
     inputInput: {
-      padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' }, color: 'white'
+      padding: theme.spacing(1, 1, 1, 0), paddingLeft: `calc(1em + ${theme.spacing(4)}px)`, transition: theme.transitions.create('width'), width: '100%', [theme.breakpoints.up('md')]: { width: '20ch' },
     },
     toolbar: {
       display: 'flex',  flexDirection: 'column', padding: '1em'
@@ -49,7 +49,7 @@ export default makeStyles((theme) => ({
     formControl: {
      
       margin: theme.spacing(2),
-       backgroundColor: alpha(theme.palette.common.white, 0.75),
+       backgroundColor: alpha(theme.palette.common.white, 0.65),
         '&:hover': { backgroundColor: alpha(theme.palette.common.white, 0.75) },
         color: 'white',
         borderRadius: theme.shape.borderRadius,

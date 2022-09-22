@@ -1,7 +1,7 @@
 import React from "react";
 import { Autocomplete } from "@react-google-maps/api";
 
-
+import Image from '../../images/Header-image.jpg'
 
 import {
   Toolbar,
@@ -48,8 +48,7 @@ const Header = ({ setCoords, type, setType, setRating, rating, cuisine, setCuisi
                   <SearchIcon />
                 </div>
                 <InputBase
-              
-                  placeholder="Search..." 
+                  placeholder="Search..."
                   classes={{
                     root: classes.inputRoot,
                     input: classes.inputInput,
