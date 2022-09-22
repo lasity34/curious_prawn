@@ -72,9 +72,6 @@ export default makeStyles((theme) => ({
     color: "white",
     borderRadius: theme.shape.borderRadius,
   },
-  select: {
-    paddingLeft: "0.5em",
-  }
   // select: {
   //   paddingLeft: "0.5em",
   //   border: "none",

@@ -2,7 +2,13 @@ import { alpha, makeStyles } from "@material-ui/core/styles";
 
 import Image from "../../images/Header-image.jpg";
 
-
+const themes = {
+  palette: {
+    primary: {
+      main: "#0d7507",
+    },
+  },
+};
 
 export default makeStyles((theme) => ({
   title: {
@@ -17,9 +23,10 @@ export default makeStyles((theme) => ({
   app: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
     backgroundSize: "100%",
-    height: "100%",
+    height: '100%',
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+    
   },
   search: {
     position: "relative",
@@ -58,6 +65,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "1em",
+   
   },
   topHead: {
     width: "100%",
@@ -74,58 +82,37 @@ export default makeStyles((theme) => ({
   },
   select: {
     paddingLeft: "0.5em",
-  }
-  // select: {
-  //   paddingLeft: "0.5em",
-  //   border: "none",
-  //   outline: "none",
-  //   color: "#fff",
-  //   background: "#111",
-  //   cursor: "pointer",
-  //   position: "relative",
-  //   zIndex: "0",
-  //   borderRadius: "10px",
-  //   "&:before": {
-  //     content: "",
-  //     background:
-  //       "linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000)",
-  //     position: "absolute",
-  //     top: "-2px",
-  //     left: "-2px",
-  //     backgroundSize: "400%",
-  //     zIndex: "-1",
-  //     filter: "blur(5px)",
-  //     width: "calc(100% + 4px)",
-  //     height: "calc(100% + 4px)",
-  //     animation: "glowing 20s linear infinite",
-  //     opacity: "0",
-  //     transition: "opacity .3s ease-in-out",
-  //     borderRadius: "10px",
-  //   },
-  //   "&:active": {
-  //     color: "#000",
-  //   },
-  //   "&active:after": {
-  //     background: "transparent",
-  //   },
-  //   "&hover:before": {
-  //     opacity: "1",
-  //   },
-  //   after: {
-  //     zIndex: "-1",
-  //     content: "",
-  //     position: "absolute",
-  //     width: "100%",
-  //     height: "100%",
-  //     background: "#111",
-  //     left: "0",
-  //     top: "0",
-  //     borderRadius: "10px",
-  //   },
-  //   "@keyframes glowing": {
-  //     " 0%": { backgroundPosition: "0 0" },
-  //     " 50%": { backgroundPosition: " 400% 0" },
-  //     "100%": { backgroundPosition: "0 0" },
-  //   },
-  // },
+    
+    border: 'none',
+    outline: 'none',
+    color: '#fff',
+    background: '#111',
+    cursor: 'pointer',
+    position: 'relative',
+    zIndex: '0',
+    borderRadius: '10px',
+    '&:before': {
+      content: '',
+      background: 'linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000)',
+      position: 'absolute',
+      top: '-2px',
+      left:'-2px',
+      backgroundSize: '400%',
+      zIndex: '-1',
+      filter: 'blur(5px)',
+      width: 'calc(100% + 4px)',
+      height: 'calc(100% + 4px)',
+      animation: 'glowing 20s linear infinite',
+      opacity: '0',
+      transition: 'opacity .3s ease-in-out',
+      borderRadius: '10px'
+    }
+
+  },
+
+  select:before {
+    
+  
+   
+}
 }));

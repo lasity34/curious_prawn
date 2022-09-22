@@ -66,7 +66,7 @@ const Header = ({
           <Box
             sx={{
               display: "flex",
-            
+              flexDirection: {  xs: "column", sm: "row" },
              alignItems: 'center'
             }}
           >
@@ -87,7 +87,23 @@ const Header = ({
                 </Select>
               </FormControl>
             </Box> */}
-          
+            <Box display="flex" alignItems="center">
+              <Typography variant="subtitle2" className={classes.title}>
+                Rating
+              </Typography>
+              <FormControl className={classes.formControl}>
+                <Select
+                  className={classes.select}
+                  value={rating}
+                  onChange={(e) => setRating(e.target.value)}
+                >
+                  <MenuItem value={1}>All Ratings</MenuItem>
+                  <MenuItem value={3}>Above 3.0</MenuItem>
+                  <MenuItem value={4}>Above 4.0</MenuItem>
+                  <MenuItem value={4.5}>Above 4.5</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
             <Box display="flex" alignItems="center">
               <Typography variant="subtitle2" className={classes.title}>
                 Cuisines
@@ -106,23 +122,6 @@ const Header = ({
                       </MenuItem>
                     );
                   })}
-                </Select>
-              </FormControl>
-            </Box>
-            <Box display="flex" alignItems="center">
-              <Typography variant="subtitle2" className={classes.title}>
-                Rating
-              </Typography>
-              <FormControl className={classes.formControl}>
-                <Select
-                  className={classes.select}
-                  value={rating}
-                  onChange={(e) => setRating(e.target.value)}
-                >
-                  <MenuItem value={1}>All Ratings</MenuItem>
-                  <MenuItem value={3}>Above 3.0</MenuItem>
-                  <MenuItem value={4}>Above 4.0</MenuItem>
-                  <MenuItem value={4.5}>Above 4.5</MenuItem>
                 </Select>
               </FormControl>
             </Box>
