@@ -46,7 +46,7 @@ const Header = ({
               Curious Prawn
             </Typography>
             <Box className={classes.box} display="flex">
-          
+           
               <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
                 <div className={classes.search}>
                   <div className={classes.searchIcon}>
