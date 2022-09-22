@@ -13,7 +13,9 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
   return (
     <div className={isDesktop ? classes.mapContainer : classes.mobileMap}>
       <GoogleMapReact
-        
+        styles= {{
+          width: "100px"
+        }}
         bootstrapURLKeys={{ key: "AIzaSyAUFsJ-sdQtILh7X70aTfSw4LGeCrMHxjQ" }}
         defaultCenter={coords}
         center={coords}

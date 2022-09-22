@@ -21,7 +21,7 @@ export default makeStyles(() => ({
         textAlign: "center", marginTop: 0
       },
       mobileMap: {
-          height: "40vh", margin: '0 auto' , width: '100%'
+          height: "40vh", margin: '1em auto', marginleft: '3em' , width: '80%'
       },
       paperMobile: {
         padding: '3px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '270%', position: 'absolute'

@@ -35,7 +35,7 @@ const List = ({
         </div>
       ) : (
         <>
-            <Typography variant="h5" gutterBottom style={{ textAlign: 'center'}}>
+            <Typography variant="h5" gutterBottom>
                 List of {type}
             </Typography>
           <Grid container spacing={3} className={classes.list}>

@@ -13,12 +13,11 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
   return (
     <div className={isDesktop ? classes.mapContainer : classes.mobileMap}>
       <GoogleMapReact
-        
         bootstrapURLKeys={{ key: "AIzaSyAUFsJ-sdQtILh7X70aTfSw4LGeCrMHxjQ" }}
         defaultCenter={coords}
         center={coords}
         defaultZoom={14}
-      
+        margin={[50, 50, 50, 50]}
         options={""}
         onChange={(e) => {
           setCoords({ lat: e.center.lat, lng: e.center.lng });

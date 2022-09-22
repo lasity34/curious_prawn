@@ -82,7 +82,7 @@ const App = () => {
         setCuisine={setCuisine}
       />
 
-      <Grid container  style={{ width: "90%", margin: '1em auto' }}>
+      <Grid container  style={{ width: "90%" }}>
         <Grid item xs={12} md={9}>
           <Map
             setCoords={setCoords}
