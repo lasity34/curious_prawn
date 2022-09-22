@@ -68,8 +68,7 @@ const Header = ({
           <Box
             sx={{
               display: "flex",
-              flexDirection: {  xs: "column", sm: "row" },
-             alignItems: 'center'
+              flexDirection: 'column',
             }}
           >
             <Box display="flex">

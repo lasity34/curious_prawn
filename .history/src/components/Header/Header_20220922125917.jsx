@@ -1,6 +1,8 @@
 import React from "react";
 import { Autocomplete } from "@react-google-maps/api";
 
+
+
 import {
   Toolbar,
   AppBar,
@@ -15,16 +17,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { useState } from "react";
 import useStyles from "./newStyle";
 
-const Header = ({
-  setCoords,
-  type,
-  setType,
-  setRating,
-  rating,
-  cuisine,
-  setCuisine,
-  cuisineList,
-}) => {
+const Header = ({ setCoords, type, setType, setRating, rating, cuisine, setCuisine, cuisineList }) => {
   const classes = useStyles();
   const [autoComplete, setAutoComplete] = useState(null);
 
@@ -43,45 +36,41 @@ const Header = ({
         <Toolbar className={classes.toolbar}>
           <div className={classes.topHead} style={{ width: "100%" }}>
             <Typography variant="h5" className={classes.title}>
-              Curious Prawn
+             Curious Prawn
             </Typography>
             <Box className={classes.box} display="flex">
               <Typography variant="subtitle1" className={classes.title}>
                 Explore new places
               </Typography>
               <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-                <div className={classes.search}>
-                  <div className={classes.searchIcon}>
-                    <SearchIcon />
-                  </div>
-                  <InputBase
-                    placeholder="Search..."
-                    classes={{
-                      root: classes.inputRoot,
-                      input: classes.inputInput,
-                    }}
-                  />
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
                 </div>
+                <InputBase
+              
+                  placeholder="Search..." 
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                />
+              </div>
               </Autocomplete>
             </Box>
           </div>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: {  xs: "column", sm: "row" },
-             alignItems: 'center'
-            }}
-          >
-            <Box display="flex">
+          <Box  display="flex" sx={{
+            [theme.breakpoints.down("sm")]: {
+              display: 'block',
+             
+            }
+          }}>
+            <Box  display="flex">
               <Typography variant="subtitle1" className={classes.title}>
                 Type
               </Typography>
               <FormControl className={classes.formControl}>
-                <Select
-                  className={classes.select}
-                  value={type}
-                  onChange={(e) => setType(e.target.value)}
-                >
+                <Select className={classes.select} value={type} onChange={(e) => setType(e.target.value)}>
                   <MenuItem value="Select Type">Restaurants</MenuItem>
                   <MenuItem value="restaurants">Restaurants</MenuItem>
                   <MenuItem value="hotels">Hotels</MenuItem>
@@ -118,11 +107,7 @@ const Header = ({
                 >
                   <MenuItem value="Select Cuisine">Select Cuisine</MenuItem>
                   {cuisineList?.map((item, i) => {
-                    return (
-                      <MenuItem key={i} value={item.name}>
-                        {item.name}
-                      </MenuItem>
-                    );
+                   return <MenuItem key={i} value={item.name}>{item.name}</MenuItem>
                   })}
                 </Select>
               </FormControl>

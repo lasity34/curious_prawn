@@ -19,7 +19,15 @@ export default makeStyles((theme) => ({
       fontSize: "1.8rem",
     },
   },
-
+  inputBox: {
+   display: 'block',
+ 
+    [theme.breakpoints.up("sm")]: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+    
+  },
   app: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
     backgroundSize: "100%",

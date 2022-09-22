@@ -1,5 +1,5 @@
 import { alpha, makeStyles } from "@material-ui/core/styles";
-
+import { Block } from "@material-ui/icons";
 import Image from "../../images/Header-image.jpg";
 
 const themes = {
@@ -19,7 +19,9 @@ export default makeStyles((theme) => ({
       fontSize: "1.8rem",
     },
   },
-
+ 
+    
+  },
   app: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
     backgroundSize: "100%",
