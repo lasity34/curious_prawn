@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const getPlacesData = async ( sw,ne ) => {
+export const getPlacesData = async (cuisine, sw,ne ) => {
 
 console.log(cuisine)
   // const oldApiKey = 'f70f3e4e3emsh93c97efeb09ac9fp190a5cjsne96c71c731c8'
@@ -17,7 +17,7 @@ console.log(cuisine)
         bl_longitude: sw.lng,
         tr_latitude: ne.lat,
         tr_longitude: ne.lng,
-        
+        combined_food: cuisine
       },
       headers: {
         'X-RapidAPI-Key': '4bba85004bmsh9192ed5c2848e09p1443c3jsn1b5d028113fd',
