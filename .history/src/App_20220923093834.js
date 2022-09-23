@@ -59,7 +59,7 @@ console.log(places)
             return  place.name && place.num_reviews > 0  && place.cuisine.some((item) => item.name === cuisine)  })
            
         );
-     
+        setFilteredCuisines([]);
         setFilteredPlaces([]);
         setIsLoading(false);
       });

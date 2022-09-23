@@ -14,7 +14,7 @@ const App = () => {
   const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   const [filteredCuisines, setFilteredCuisines] = useState([]);
-  const [cuisine, setCuisine] = useState("Asian");
+  const [cuisine, setCuisine] = useState("Select Cuisine");
 
   const [childClicked, setChildClicked] = useState(null);
 
@@ -48,7 +48,7 @@ const App = () => {
     setFilteredCuisines(cuisineName);
   }, [cuisine]);
 
- 
+  // && place.cuisine.some((item) => item.name === cuisine) 
 console.log(places)
   useEffect(() => {
     if (bounds.sw && bounds.ne) {
@@ -56,10 +56,10 @@ console.log(places)
       getPlacesData( bounds.sw, bounds.ne).then((data) => {
         setPlaces(
           data.filter((place) => {
-            return  place.name && place.num_reviews > 0  && place.cuisine.some((item) => item.name === cuisine)  })
+            return  place.name && place.num_reviews > 0  })
            
         );
-     
+        setFilteredCuisines([]);
         setFilteredPlaces([]);
         setIsLoading(false);
       });
@@ -72,6 +72,8 @@ console.log(places)
 
       <Header
         setCoords={setCoords}
+        type={type}
+        setType={setType}
         setRating={setRating}
         rating={rating}
         cuisine={cuisine}

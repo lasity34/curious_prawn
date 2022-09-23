@@ -17,7 +17,7 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
         defaultCenter={coords}
         center={coords}
         defaultZoom={14}
-        margin={[50, 50, 50, 50]}
+        margin= {[50, 50, 50,50 ]}
         options={""}
         onChange={(e) => {
           setCoords({ lat: e.center.lat, lng: e.center.lng });
@@ -34,7 +34,9 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
           >
             {isDesktop ? (
               <Paper elevation={3} className={classes.paper}>
-                <p className={classes.name}>{place.name}</p>
+                <p className={classes.name}>
+                  {place.name}
+                </p>
                 <img
                   className={classes.pointer}
                   src={
@@ -54,18 +56,19 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
               </Paper>
             ) : (
               <div>
-                <LocationOnOutlinedIcon />
+                <LocationOnOutlinedIcon  />
                 <Paper elevation={3} className={classes.paperMobile}>
                   <p className={classes.name}> {place.name}</p>
                   <img
-                    className={classes.pointer}
-                    src={
-                      place.photo
-                        ? place.photo.images.small.url
-                        : "https://unsplash.com/photos/GXXYkSwndP4"
-                    }
-                  />
+                  className={classes.pointer}
+                  src={
+                    place.photo
+                      ? place.photo.images.small.url
+                      : "https://unsplash.com/photos/GXXYkSwndP4"
+                  } />
+              
                 </Paper>
+                
               </div>
             )}
           </div>

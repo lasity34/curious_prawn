@@ -40,13 +40,13 @@ const App = () => {
     setFilteredPlaces(filteredPlaces);
   }, [rating]);
 
-  useEffect(() => {
-    const cuisineName = places.filter((item) => {
-      return  item.cuisine.some((item2) => item2.name === cuisine)
-    })
+  // useEffect(() => {
+  //   const cuisineName = places.filter((item) => {
+  //     return  item.cuisine.some((item2) => item2.name === cuisine)
+  //   })
    
-    setFilteredCuisines(cuisineName);
-  }, [cuisine]);
+  //   setFilteredCuisines(cuisineName);
+  // }, [cuisine]);
 
  
 console.log(places)
@@ -59,7 +59,7 @@ console.log(places)
             return  place.name && place.num_reviews > 0  && place.cuisine.some((item) => item.name === cuisine)  })
            
         );
-     
+        setFilteredCuisines([]);
         setFilteredPlaces([]);
         setIsLoading(false);
       });

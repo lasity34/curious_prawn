@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const getPlacesData = async (sw,ne ) => {
+export const getPlacesData = async (type, sw,ne ) => {
 
 
   // const oldApiKey = 'f70f3e4e3emsh93c97efeb09ac9fp190a5cjsne96c71c731c8'
@@ -19,7 +19,7 @@ export const getPlacesData = async (sw,ne ) => {
         tr_longitude: ne.lng,
       },
       headers: {
-        'X-RapidAPI-Key': '4bba85004bmsh9192ed5c2848e09p1443c3jsn1b5d028113fd',
+        'X-RapidAPI-Key': '9170ca8607msh094266e3c22a4f7p157dd1jsn15fbf4bc6feb',
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
       }
     });

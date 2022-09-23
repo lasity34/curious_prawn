@@ -14,14 +14,14 @@ const App = () => {
   const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   const [filteredCuisines, setFilteredCuisines] = useState([]);
-  const [cuisine, setCuisine] = useState("Asian");
+  const [cuisine, setCuisine] = useState("Select Cuisine");
 
   const [childClicked, setChildClicked] = useState(null);
 
   const [coords, setCoords] = useState({});
   const [bounds, setBounds] = useState({});
 
-  
+  const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -48,18 +48,18 @@ const App = () => {
     setFilteredCuisines(cuisineName);
   }, [cuisine]);
 
- 
-console.log(places)
+  
+
   useEffect(() => {
     if (bounds.sw && bounds.ne) {
       setIsLoading(true);
       getPlacesData( bounds.sw, bounds.ne).then((data) => {
         setPlaces(
           data.filter((place) => {
-            return  place.name && place.num_reviews > 0  && place.cuisine.some((item) => item.name === cuisine)  })
+            return  place.name && place.num_reviews > 0 && place.cuisine.some((item) => item.name === cuisine) })
            
         );
-     
+        setFilteredCuisines([]);
         setFilteredPlaces([]);
         setIsLoading(false);
       });
@@ -72,6 +72,8 @@ console.log(places)
 
       <Header
         setCoords={setCoords}
+        type={type}
+        setType={setType}
         setRating={setRating}
         rating={rating}
         cuisine={cuisine}
@@ -92,7 +94,7 @@ console.log(places)
             }
             setChildClicked={setChildClicked}
           />
-        
+          <cuisineApi />
         </Grid>
         <Grid item xs={12} md={3}>
           <List
@@ -103,6 +105,8 @@ console.log(places)
            }
             childClicked={childClicked}
             isLoading={isLoading}
+            type={type}
+            setType={setType}
             setRating={setRating}
             rating={rating}
           />

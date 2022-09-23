@@ -13,7 +13,7 @@ const List = ({
   places,
   childClicked,
   isLoading,
-  
+  type
 }) => {
   const classes = useStyles();
 
