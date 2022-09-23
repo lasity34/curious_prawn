@@ -59,9 +59,7 @@ console.log(places)
             return  place.name && place.num_reviews > 0  && place.cuisine.some((item) => item.name === cuisine)  })
            
         );
-        setFilteredCuisines(data.filter((place) => {
-          return  place.name && place.num_reviews > 0  && place.cuisine.some((item) => item.name === cuisine)  })
-         );
+        setFilteredCuisines(cuisineName);
         setFilteredPlaces([]);
         setIsLoading(false);
       });
