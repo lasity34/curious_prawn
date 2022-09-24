@@ -34,7 +34,7 @@ const App = () => {
   useEffect(() => {
     const filteredPlaces = places.filter((place) => place.rating > rating);
 
-    setFilteredRatings(filteredRatings);
+    setFilteredPlaces(filteredPlaces);
   }, [rating]);
 
   // useEffect(() => {
@@ -59,7 +59,7 @@ const App = () => {
       getPlacesData(cuisineKey, bounds.sw, bounds.ne).then((data) => {
         setPlaces(
           data.filter((place) => {
-            return place.name && place.num_reviews > 0 && place.rating > rating;
+            return place.name && place.num_reviews > 0;
           })
         );
 
@@ -88,13 +88,13 @@ const App = () => {
             setCoords={setCoords}
             setBounds={setBounds}
             coords={coords}
-            places={filteredCuisines.length ? filteredCuisines : places}
+            places={filteredCuisines.length ? filteredCuisines && filteredRatings: places}
             setChildClicked={setChildClicked}
           />
         </Grid>
         <Grid item xs={12} md={3}>
           <List
-            places={filteredCuisines.length ? filteredCuisines : places}
+            places={filteredCuisines.length ? filteredCuisines && filteredRatings: places}
             childClicked={childClicked}
             isLoading={isLoading}
             setRating={setRating}

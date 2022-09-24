@@ -9,7 +9,7 @@ import { cuisineList } from "./Objects/cuisines";
 const App = () => {
   const [places, setPlaces] = useState([]);
 
-  const [filteredRatings, setFilteredRatings] = useState([]);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
 
   const [filteredCuisines, setFilteredCuisines] = useState(places);
   const [cuisine, setCuisine] = useState("Asian");
@@ -34,7 +34,7 @@ const App = () => {
   useEffect(() => {
     const filteredPlaces = places.filter((place) => place.rating > rating);
 
-    setFilteredRatings(filteredRatings);
+    setFilteredPlaces(filteredPlaces);
   }, [rating]);
 
   // useEffect(() => {
@@ -50,16 +50,15 @@ const App = () => {
     const key = cuisineList.filter((item) => item.name === cuisine);
     const cuisineKey = key[0].key;
     setCuisineKey(cuisineKey);
-  }, [cuisine]);
+  }, [cuisineKey]);
 
-  console.log(cuisineKey)
   useEffect(() => {
     if (cuisineKey && bounds.sw && bounds.ne) {
       setIsLoading(true);
       getPlacesData(cuisineKey, bounds.sw, bounds.ne).then((data) => {
         setPlaces(
           data.filter((place) => {
-            return place.name && place.num_reviews > 0 && place.rating > rating;
+            return place.name && place.num_reviews > 0;
           })
         );
 
@@ -67,8 +66,8 @@ const App = () => {
         setIsLoading(false);
       });
     }
-  }, [bounds, cuisineKey]);
-
+  }, [bounds, cuisine]);
+console.log(places)
   return (
     <div>
       <CssBaseline />

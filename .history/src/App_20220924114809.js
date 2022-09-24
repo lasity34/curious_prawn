@@ -34,7 +34,7 @@ const App = () => {
   useEffect(() => {
     const filteredPlaces = places.filter((place) => place.rating > rating);
 
-    setFilteredRatings(filteredRatings);
+    setFilteredPlaces(filteredPlaces);
   }, [rating]);
 
   // useEffect(() => {
@@ -59,7 +59,7 @@ const App = () => {
       getPlacesData(cuisineKey, bounds.sw, bounds.ne).then((data) => {
         setPlaces(
           data.filter((place) => {
-            return place.name && place.num_reviews > 0 && place.rating > rating;
+            return place.name && place.num_reviews > 0;
           })
         );
 
