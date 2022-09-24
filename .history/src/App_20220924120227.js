@@ -9,9 +9,9 @@ import { cuisineList } from "./Objects/cuisines";
 const App = () => {
   const [places, setPlaces] = useState([]);
 
-  // const [filteredRatings, setFilteredRatings] = useState([]);
+  const [filteredRatings, setFilteredRatings] = useState([]);
 
-  const [filteredCuisines, setFilteredCuisines] = useState(places);
+  // const [filteredCuisines, setFilteredCuisines] = useState(places);
   const [cuisine, setCuisine] = useState("Asian");
   const [cuisineKey, setCuisineKey] = useState(10632);
 
