@@ -88,7 +88,7 @@ const Header = ({
           
             <Box display="flex" alignItems="center">
               <Typography variant="subtitle2" className={classes.title}>
-                Cuisines
+                Bjorn
               </Typography>
               <FormControl className={classes.formControl}>
                 <Select
@@ -108,7 +108,9 @@ const Header = ({
               </FormControl>
             </Box>
             <Box display="flex" alignItems="center">
-              
+              <Typography variant="subtitle2" className={classes.title}>
+                Rating
+              </Typography>
               <FormControl className={classes.formControl}>
                 <Select
                   className={classes.select}
