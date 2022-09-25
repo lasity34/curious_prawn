@@ -18,7 +18,7 @@ export const cuisineList = [
   { key: "10670", name: "Pub" },
   { key: "10345", name: "Steakhouse" },
   { key: "10653", name: "Sushi" },
-  { key: "10660", name: "Thai" },
+ 
   { key: "10675", name: "Vietnamese" },
   
 ];
