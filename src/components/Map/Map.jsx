@@ -34,7 +34,7 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
           >
             {isDesktop ? (
               <Paper elevation={3} className={classes.paper}>
-                <p className={classes.name}>{place.name}</p>
+                <p  className={classes.name}>{place.name}</p>
                 <img
                   className={classes.pointer}
                   src={
@@ -44,13 +44,7 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
                   }
                  
                 />
-                <Rating
-                  sx={{
-                    fontSize: "0.9rem",
-                  }}
-                  value={Number(place.rating)}
-                  readOnly
-                />
+              
               </Paper>
             ) : (
               <div>
