@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/styles"
 
 export default makeStyles(() => ({
     paper: {
-        padding: '3px 5px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '5.5em', height: "8em" , 
+        padding: '3px 5px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '5em', height: "8em" , 
       },
       mapContainer: {
         height: '85vh', width: '95%', margin: "20px auto"
