@@ -82,7 +82,7 @@ export default makeStyles((theme) => ({
     borderRadius: '20px',
     backgroundColor: alpha(theme.palette.common.white, 0.9),
     "&:hover": { backgroundColor: alpha(theme.palette.common.white, 0.65) },
-    fontSize: '0.8rem'
+    fontSize: '1rem'
   },
   listHeader: {
     display: "flex",

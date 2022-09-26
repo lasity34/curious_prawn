@@ -32,16 +32,16 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         title={place.name}
       />
       <CardContent>
-        {place.name && <Typography gutterBottom variant="h5">
+        {place.name && <Typography gutterBottom variant="subtitle1">
           {place.name}
         </Typography>}
 
         <Box display="flex" justifyContent="space-between" flexDirection='column'>
-          <Typography variant="subtitle1">Ranking:</Typography>
+          <Typography variant="subtitle1">Ranking</Typography>
           <Typography variant="subtitle1">{place.ranking}</Typography>
         </Box>
         <Box display="flex" justifyContent="space-between">
-          <Typography variant="subtitle1">Rating:</Typography>
+          <Typography variant="subtitle1">Rating</Typography>
           <Box display="flex" alignItems="center">
           <Typography variant="subtitle1" className={classes.rating}>{place.rating}</Typography>
           <Rating size="small" value={Number(place.rating)} readOnly />
