@@ -19,7 +19,7 @@ export const getPlacesData = async (cuisine, sw,ne ) => {
         bl_longitude: sw.lng,
         tr_latitude: ne.lat,
         tr_longitude: ne.lng,
-        combined_food: str 
+        combined_food: str ? str : 0
       },
       headers: {
         'X-RapidAPI-Key': '57f0bec381mshb8496907c01bfc3p1b35abjsn7aa8b2fffd4d',

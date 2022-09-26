@@ -1,5 +1,4 @@
 export const cuisineList = [
-  { key: "0", name: "Select Cuisine" },
   { key: "10632", name: "African" },
   { key: "9908", name: "American" },
   { key: "10659", name: "Asian" },

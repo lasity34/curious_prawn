@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Grid } from "@mui/material";
 import { getPlacesData } from "./api/index";
 import Header from "./components/Header/Header";
 import List from "./pages/List/List";
@@ -14,8 +14,8 @@ const App = () => {
   // const [filteredRatings, setFilteredRatings] = useState([]);
 
   const [filteredCuisines, setFilteredCuisines] = useState(places);
-  const [cuisine, setCuisine] = useState("Select Cuisine");
-  const [cuisineKey, setCuisineKey] = useState(0);
+  const [cuisine, setCuisine] = useState("");
+  const [cuisineKey, setCuisineKey] = useState(10632);
 
   const [childClicked, setChildClicked] = useState(null);
 

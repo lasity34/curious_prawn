@@ -1,5 +1,4 @@
 export const cuisineList = [
-  { key: "0", name: "Select Cuisine" },
   { key: "10632", name: "African" },
   { key: "9908", name: "American" },
   { key: "10659", name: "Asian" },
@@ -17,7 +16,7 @@ export const cuisineList = [
   { key: "10633", name: "Moroccan" },
   { key: "10641", name: "Pizza" },
   { key: "10670", name: "Pub" },
-  { key: "10643", name: "Seafood" },
+  { key: "10643", name: "Seafood" }
   { key: "10345", name: "Steakhouse" },
   { key: "10653", name: "Sushi" },
   { key: "10660", name: "Thai" },

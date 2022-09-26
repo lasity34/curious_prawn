@@ -14,7 +14,7 @@ const App = () => {
   // const [filteredRatings, setFilteredRatings] = useState([]);
 
   const [filteredCuisines, setFilteredCuisines] = useState(places);
-  const [cuisine, setCuisine] = useState("Select Cuisine");
+  const [cuisine, setCuisine] = useState("Asian");
   const [cuisineKey, setCuisineKey] = useState(0);
 
   const [childClicked, setChildClicked] = useState(null);

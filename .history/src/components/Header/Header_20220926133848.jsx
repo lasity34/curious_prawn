@@ -75,7 +75,7 @@ const Header = ({
                   value={cuisine}
                   onChange={(e) => setCuisine(e.target.value)}
                   >
-                 
+                  <MenuItem value={'Asian'}>Select Cuisine</MenuItem>
                   {cuisineList?.map((item, i) => {
                     return (
                       <MenuItem key={i} value={item.name}>
