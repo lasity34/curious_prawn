@@ -63,7 +63,7 @@ import {
         <div className={classes.signUpBody}>
           <div
             className={classes.signContainer}
-            style={{ width: isDesktop ? "25%" : "100%" }}
+            style={{ width: isDesktop ? "60%" : "80%" }}
           >
             <Box className={classes.contentContainer}>
               { error && <p>{error}</p>}
