@@ -15,7 +15,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Forgotpassword" element={<ForgotPassword />} />
+        <Route path="./Forgotpassword" element={<ForgotPassword />} />
         <Route
           path="/*"
           element={

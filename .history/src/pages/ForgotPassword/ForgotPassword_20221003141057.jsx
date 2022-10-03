@@ -14,18 +14,18 @@ import {
   
   import useStyles from "./styles";
 
-  const Login = () => {
+   const ForgotPassword = () => {
     const navigate = useNavigate()
     const classes = useStyles();
   
-    const { login } = useAuth();
+    const {  resetPassword} = useAuth();
     const isDesktop = useMediaQuery(`(min-width:800px)`);
   
     const [ loading, setLoading] = useState(false)
     const [ error, setError] = useState('')
     const [formData, setFormData] = useState({
       email: "",
-      password: "",
+ 
     });
   
    function handleChange(event) {
@@ -44,12 +44,12 @@ import {
       try {
         setError('')
         setLoading(true)
-        await login(formData.email, formData.password);
+        await resetPassword(formData.email);
         setFormData({
           email: "",
-          password: "",
+         
         })
-      navigate("/")
+
       }
       catch {
         setError('Failed to setup account')
@@ -70,7 +70,9 @@ import {
               <Typography variant="h4" className={classes.formTitle}>
                 Curious Prawn
               </Typography>
-           
+              <Typography variant="subtitle1" className={classes.formTitle}>
+              Enter your email, phone, or username and we'll send you a link to get back into your account.
+              </Typography>
               <form display="flex" flexdirection="column" onSubmit={handleSubmit}>
                 <FormControl className={classes.formContent}>
                   <InputLabel htmlFor="email">Email</InputLabel>
@@ -85,19 +87,7 @@ import {
   
                   />
                 </FormControl>
-             
-                <FormControl className={classes.formContent}>
-                  <InputLabel htmlFor="password">Password</InputLabel>
-                  <Input
-                    className={classes.formInput}
-                    id="password"
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                    value={formData.password}
-                    required
-                  />
-                </FormControl>
+            
                 <Button
                 type="submit"
                   sx={{
@@ -107,20 +97,18 @@ import {
                   className={classes.button}
                   disabled={loading}
                 >
-                 Login
+                 Send Link
                 </Button>
               </form>
+             
               <Link to="../../Forgotpassword" className={classes.forgot}>
-                Forgot password?
+              Back To Login
               </Link>
+             
               <Box className={classes.bottomBox}>
-              <Typography className={classes.accountText} variant="subtitle1">
-                Don't have an account?
-              </Typography>
-              <Link to="../Signup" className={classes.link}>
-                Sign Up
-              </Link>
+                <Typography>Don't have an account? <Link to="../Signup/" className={classes.link} >Sign Up </Link></Typography>
               </Box>
+              
             </Box>
           
           </div>
@@ -129,5 +117,4 @@ import {
     );
   };
   
-
-export default Login
+export default ForgotPassword

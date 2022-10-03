@@ -113,14 +113,10 @@ import {
               <Link to="../../Forgotpassword" className={classes.forgot}>
                 Forgot password?
               </Link>
-              <Box className={classes.bottomBox}>
-              <Typography className={classes.accountText} variant="subtitle1">
-                Don't have an account?
-              </Typography>
-              <Link to="../Signup" className={classes.link}>
-                Sign Up
-              </Link>
+              <Box>
+                <Typography>Don't have an account? <Link to="../Signup/" className={classes.link} >Sign Up </Link></Typography>
               </Box>
+              
             </Box>
           
           </div>

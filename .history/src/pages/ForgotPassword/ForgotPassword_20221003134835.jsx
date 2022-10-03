@@ -14,7 +14,7 @@ import {
   
   import useStyles from "./styles";
 
-  const Login = () => {
+   const ForgotPassword = () => {
     const navigate = useNavigate()
     const classes = useStyles();
   
@@ -70,7 +70,9 @@ import {
               <Typography variant="h4" className={classes.formTitle}>
                 Curious Prawn
               </Typography>
-           
+              <Typography variant="subtitle1" className={classes.formTitle}>
+              Enter your email, phone, or username and we'll send you a link to get back into your account.
+              </Typography>
               <form display="flex" flexdirection="column" onSubmit={handleSubmit}>
                 <FormControl className={classes.formContent}>
                   <InputLabel htmlFor="email">Email</InputLabel>
@@ -114,13 +116,9 @@ import {
                 Forgot password?
               </Link>
               <Box className={classes.bottomBox}>
-              <Typography className={classes.accountText} variant="subtitle1">
-                Don't have an account?
-              </Typography>
-              <Link to="../Signup" className={classes.link}>
-                Sign Up
-              </Link>
+                <Typography>Don't have an account? <Link to="../Signup/" className={classes.link} >Sign Up </Link></Typography>
               </Box>
+              
             </Box>
           
           </div>
@@ -129,5 +127,4 @@ import {
     );
   };
   
-
-export default Login
+export default ForgotPassword

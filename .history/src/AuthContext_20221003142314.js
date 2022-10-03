@@ -46,15 +46,6 @@ export function AuthProvider({ children }) {
   function resetPassword(email) {
     const auth = getAuth()
   return  sendPasswordResetEmail(auth,  email)
-        .then(() => {
-          return 'Password reset email sent!'
-
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-         
-        });
   }
 
   useEffect(() => {

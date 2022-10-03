@@ -54,7 +54,7 @@ export default makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
-    color: alpha(theme.palette.success.dark, 0.95),
+    color: alpha(theme.palette.success.main, 0.95),
     "&:hover": {color: alpha(theme.palette.success.main, 0.65) },
     
   }

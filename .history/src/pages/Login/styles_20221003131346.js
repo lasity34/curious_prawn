@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
   signUpBody: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
     height: '100vh',
-    padding: '20px'
+    padding: '100px'
   },
   signContainer: {
    backgroundColor: "#f7f6eb",
@@ -47,15 +47,18 @@ export default makeStyles((theme) => ({
     margin: "2em auto",
     padding: "0.5em 4em",
     color: "white",
-    backgroundColor: alpha(theme.palette.success.dark, 0.95),
+    backgroundColor: alpha(theme.palette.success.main, 0.95),
     "&:hover": { backgroundColor: alpha(theme.palette.success.main, 0.65) },
     textTransform: 'capitalize'
     
   },
   link: {
     textDecoration: 'none',
-    color: alpha(theme.palette.success.dark, 0.95),
+    color: alpha(theme.palette.success.main, 0.95),
     "&:hover": {color: alpha(theme.palette.success.main, 0.65) },
     
+  },
+  forgot:  {
+    marginBottom: '50px'
   }
 }));
