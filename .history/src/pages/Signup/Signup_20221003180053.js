@@ -16,7 +16,7 @@ import useStyles from "./styles";
 const SignUp = () => {
   const classes = useStyles();
   const navigate = useNavigate()
-  const { signUp} = useAuth();
+  const { signUp,  sendVerification } = useAuth();
   const isDesktop = useMediaQuery(`(min-width:800px)`);
 
   const [ loading, setLoading] = useState(false)
