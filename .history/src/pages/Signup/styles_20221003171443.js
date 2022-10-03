@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
   signUpBody: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
     height: '100vh',
-    padding: '20px 5px'
+    padding: '10px'
   },
   signContainer: {
    backgroundColor: "#f7f6eb",
