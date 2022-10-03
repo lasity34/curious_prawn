@@ -31,7 +31,7 @@ export function AuthProvider({ children }) {
 
   function sendVerification(email) {
     const auth = getAuth();
-    return sendEmailVerification(auth.currentUser, email)
+    return sendEmailVerification(auth, email)
   }
 
   function login(email, password) {
