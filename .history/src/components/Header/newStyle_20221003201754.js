@@ -35,7 +35,7 @@ export default makeStyles((theme) => ({
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
-    color: alpha(theme.palette.common.white, 0.85),
+    color: alpha(theme.palette.common.white, 0.55),
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
