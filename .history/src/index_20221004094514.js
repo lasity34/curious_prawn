@@ -19,9 +19,9 @@ ReactDOM.render(
         <Route
           path="/*"
           element={
-
+            <PrivateRoute>
               <App />
-   
+            </PrivateRoute>
           }
         />
       </Routes>
