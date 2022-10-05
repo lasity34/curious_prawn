@@ -71,7 +71,10 @@ const Header = ({
             <Typography variant="h4" className={classes.title}>
               Curious Prawn
             </Typography>
-         
+            {currentUser &&
+            <Typography variant="subtitle1" className={classes.title}>
+             Welcome  currentUser.displayName!
+            </Typography>}
           
             <Link to="../../">
               <Box className={classes.box} display="flex">
