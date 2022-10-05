@@ -77,8 +77,8 @@ export default makeStyles((theme) => ({
   },
   
   select: {
-    marginRight: '20px',
-    padding: "0 0.7em",
+    marginRight: '40px',
+    padding: "0 0.4em",
     color: "#302927",
     borderRadius: '20px',
     backgroundColor: alpha(theme.palette.common.white, 0.9),

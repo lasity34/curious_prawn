@@ -77,7 +77,7 @@ export default makeStyles((theme) => ({
   },
   
   select: {
-    marginRight: '20px',
+    marginRight: '20pxpx',
     padding: "0 0.7em",
     color: "#302927",
     borderRadius: '20px',
