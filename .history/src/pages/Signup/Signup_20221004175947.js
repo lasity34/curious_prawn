@@ -9,24 +9,32 @@ import {
   
 } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../../AuthContext";
 
 import useStyles from "./styles";
+import {  getAuth, sendSignInLinkToEmail } from "firebase/auth";
 const SignUp = () => {
   const classes = useStyles();
   const navigate = useNavigate()
   const { signUp} = useAuth();
   const isDesktop = useMediaQuery(`(min-width:800px)`);
-
+  const auth = getAuth();
   const [ loading, setLoading] = useState(false)
   const [ error, setError] = useState('')
+  const [message, setMessage] = useState('')
   const [formData, setFormData] = useState({
     email: "",
     fullname: "",
     username: "",
     password: "",
   });
+
+  const actionCodeSettings = {
+    handleCodeInApp: true,
+    url: 'localhost'
+  }
+  
 
  function handleChange(event) {
     const { name, value } = event.target;
@@ -43,9 +51,10 @@ const SignUp = () => {
 
     try {
       setError('')
-      setLoading(true)
+    
       await signUp(formData.email, formData.password);
-     
+      await sendSignInLinkToEmail(auth, formData.email, actionCodeSettings)
+
       setFormData({
         email: "",
         fullname: "",
@@ -54,13 +63,13 @@ const SignUp = () => {
       })
       navigate("/")
     }
-    catch {
-      setError('Failed to setup account')
+    catch(error){
+      setError(error.message)
      
     }
-    setLoading(false)
+  
   }
-  console.log(formData.username)
+
 
   return (
     <>
@@ -70,6 +79,7 @@ const SignUp = () => {
           style={{ width: isDesktop ? "25%" : "66%" }}
         >
           <Box className={classes.contentContainer}>
+            { message && <p>{message}</p>}
             { error && <p>{error}</p>}
             <Typography variant="h4" className={classes.formTitle}>
               Curious Prawn
